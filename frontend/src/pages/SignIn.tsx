@@ -45,7 +45,7 @@ handleSubmit } = useForm<SignInFormData>();
                 <label className="text-gray-700 text-sm font-bold flex-1">
                     Email
                     <input type="email" className="border rounded w-full py-1 px-2 font-normal" {...register("email",{required:"This field is required"})}></input>
-                    {errors.email && (<span className="text-red-500">{errors.email.message}</span>)}
+                    {errors.email && (<span className="text-sm text-red-500 font-bold">{errors.email.message}</span>)}
                 </label>
                
                 <label className="text-gray-700 text-sm font-bold flex-1">
@@ -54,7 +54,7 @@ handleSubmit } = useForm<SignInFormData>();
                         value: 6,
                         message: "Password can have a max length of 6",
                     }})}></input>
-                      {errors.password && (<span className="text-red-500">{errors.password.message}</span> )}
+                      {errors.password && (<span className="text-sm text-red-500 font-bold">{errors.password.message}</span> )}
                 </label>
                 <span className="flex items-center justify-between">
                     <span className="text-sm">

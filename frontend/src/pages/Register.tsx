@@ -46,19 +46,19 @@ const Register = () =>{
                 <label className="text-gray-700 text-sm font-bold flex-1">
                     First Name
                     <input className="border rounded w-full py-1 px-2 font-normal" {...register("firstName",{required:"This field is required "})}></input>
-                    {errors.firstName && (<span className="text-red-500">{errors.firstName.message}</span> )}
+                    {errors.firstName && (<span className="text-sm text-red-500 font-bold">{errors.firstName.message}</span> )}
                 </label>
                 <label className="text-gray-700 text-sm font-bold flex-1">
                     Last Name
                     <input className="border rounded w-full py-1 px-2 font-normal" {...register("lastName",{required:"This field is required"})}></input>
-                    {errors.lastName && (<span className="text-red-500">{errors.lastName.message}</span> )}
+                    {errors.lastName && (<span className="text-sm text-red-500 font-bold">{errors.lastName.message}</span> )}
                 </label>
             </div>
           
             <label className="text-gray-700 text-sm font-bold flex-1">
                     Email
                     <input type="email" className="border rounded w-full py-1 px-2 font-normal" {...register("email",{required:"This field is required"})}></input>
-                    {errors.email && (<span className="text-red-500">{errors.email.message}</span>)}
+                    {errors.email && (<span className="text-sm text-red-500 font-bold">{errors.email.message}</span>)}
                 </label>
                
                 <label className="text-gray-700 text-sm font-bold flex-1">
@@ -67,7 +67,7 @@ const Register = () =>{
                         value: 6,
                         message: "Password can have a max length of 6",
                     }})}></input>
-                      {errors.password && (<span className="text-red-500">{errors.password.message}</span> )}
+                      {errors.password && (<span className="text-sm text-red-500 font-bold">{errors.password.message}</span> )}
                 </label>
                 <label className="text-gray-700 text-sm font-bold flex-1">
                     Confirm Password
@@ -78,7 +78,7 @@ const Register = () =>{
                             return "Your Password do not match";
                         }
                     } })}></input>
-                      {errors.confirmPassword && (<span className="text-red-500">{errors.confirmPassword.message}</span> )}
+                      {errors.confirmPassword && (<span className="text-sm text-red-500 font-bold">{errors.confirmPassword.message}</span> )}
                 </label>
             <span className="flex items-center justify-between">
             <span className="text-sm">
