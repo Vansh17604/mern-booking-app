@@ -80,6 +80,7 @@ test("Should display  hotels", async ({ page }) => {
         await page.reload();
         await expect(page.locator("[name='name']")).toHaveValue("Test Hotel Edited");
         await page.locator("[name='name']").fill("Test Hotel");
+        await page.locator("[name='city']").fill("Test City");
         await page.getByRole("button",{ name: "Save"}).click();
         await expect(page.getByText("Hotel Updated Sucessfully!")).toBeVisible();
     });
