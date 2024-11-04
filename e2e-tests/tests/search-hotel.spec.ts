@@ -31,3 +31,15 @@ test("Shold show hotel search results ", async({page})=>{
     await expect(page.getByText("Test Hotel")).toBeVisible();
     
 });
+
+test("Shoul get the detail of ", async({page})=>{
+    await page.goto(UI_URL);
+
+    await page.getByPlaceholder("Where are you going").fill("Test City");
+    await page. getByRole("button",{name: "Search"}).click();
+
+    await page.getByText("Test Hotel").click();
+    await expect(page).toHaveURL(/detail/);
+    await expect(page.getByRole("button", {name: "Book Now"})).toBeVisible();
+
+});
